@@ -2,7 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import { FreeMode, Mousewheel, Pagination } from "swiper/modules";
 
 const DishCato = () => {
     const dishImages = [
@@ -26,6 +26,9 @@ const DishCato = () => {
             <Swiper
                 slidesPerView={2.5}
                 spaceBetween={15}
+                freeMode={true}
+                mousewheel={true}
+                modules={[FreeMode, Mousewheel]}
                 breakpoints={{
                     640: {
                         slidesPerView: 3.5,
@@ -36,10 +39,6 @@ const DishCato = () => {
                         spaceBetween: 25,
                     },
                 }}
-                // pagination={{
-                //     clickable: true,
-                // }}
-                modules={[Pagination]}
                 className="mySwiper"
             >
                 {dishImages.map((image, index) => (

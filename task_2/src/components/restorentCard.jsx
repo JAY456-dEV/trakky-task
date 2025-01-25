@@ -3,7 +3,7 @@ import { FaStar } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import { FreeMode, Mousewheel, Pagination } from "swiper/modules";
 import { restaurants } from "../data";
 import CommonCard from "./commonCard";
 
@@ -23,6 +23,9 @@ const RestaurantSlider = () => {
             <Swiper
                 slidesPerView={1.1}
                 spaceBetween={15}
+                freeMode={true}
+                mousewheel={true}
+                modules={[FreeMode, Mousewheel]}
                 breakpoints={{
                     480: {
                         slidesPerView: 1.5,

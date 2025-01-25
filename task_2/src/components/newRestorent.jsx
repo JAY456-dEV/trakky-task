@@ -4,7 +4,7 @@ import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import { FreeMode, Mousewheel, Pagination } from "swiper/modules";
 import { restaurants } from "../data";
 import CommonCard from "./commonCard";
 
@@ -29,6 +29,9 @@ const RestaurantList = () => {
             <Swiper
                 slidesPerView={1.2}
                 spaceBetween={15}
+                freeMode={true} 
+                mousewheel={true} 
+                modules={[FreeMode, Mousewheel]} 
                 className="mySwiper"
                 breakpoints={{
                     480: {
