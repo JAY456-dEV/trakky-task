@@ -17,7 +17,7 @@ const PromoCard = () => {
                 </button>
             </div>
 
-            <div className="flex-shrink-0 mt-4 sm:mt-0 sm:ml-4 w-full sm:w-32 lg:w-40">
+            <div className="flex-shrink-0 mt-4 sm:mt-0 sm:ml-4 w-full sm:w-32 lg:w-40 md:block hidden">
                 <img
                     src="./public/pizza.png"
                     alt="Food Promo"

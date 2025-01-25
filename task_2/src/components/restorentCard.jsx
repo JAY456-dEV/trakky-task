@@ -45,7 +45,6 @@ const RestaurantSlider = () => {
                         spaceBetween: 35,
                     },
                 }}
-                modules={[Pagination]}
                 className="mySwiper"
             >
                 {[...restaurants].sort(() => Math.random() - 0.5).map((restaurant, index) => (

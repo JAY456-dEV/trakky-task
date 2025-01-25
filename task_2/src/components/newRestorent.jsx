@@ -29,8 +29,6 @@ const RestaurantList = () => {
             <Swiper
                 slidesPerView={1.2}
                 spaceBetween={15}
-                modules={[Pagination]}
-                pagination={{ clickable: true }}
                 className="mySwiper"
                 breakpoints={{
                     480: {
