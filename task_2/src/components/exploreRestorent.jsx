@@ -1,93 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { FaStar } from "react-icons/fa";
+import { restaurants } from "../data";
 
 function ExploreRestaurant() {
     const [likedCards, setLikedCards] = useState({});
     const [isSmallScreen, setIsSmallScreen] = useState(false);
-
-    const restaurants = [
-        {
-            id: 1,
-            name: "Wow! China",
-            tagline: "Best In Veg Noodles",
-            rating: 4.2,
-            deliveryTime: "55 Mins",
-            description:
-                "Tibetan, Chinese, Asian, Snacks Lorem, ipsum dolor sit amet consectetur adipisicing .",
-            img: "https://media.istockphoto.com/id/1442417585/photo/person-getting-a-piece-of-cheesy-pepperoni-pizza.jpg?s=612x612&w=0&k=20&c=k60TjxKIOIxJpd4F4yLMVjsniB4W1BpEV4Mi_nb4uJU=",
-        },
-        {
-            id: 2,
-            name: "Pizza Hut",
-            tagline: "Best In Fast Food",
-            rating: 4.5,
-            deliveryTime: "30 Mins",
-            description:
-                "Pizza, Fast Food, Beverages Lorem, ipsum dolor sit amet consectetur adipisicing .",
-            img: "https://media.istockphoto.com/id/1442417585/photo/person-getting-a-piece-of-cheesy-pepperoni-pizza.jpg?s=612x612&w=0&k=20&c=k60TjxKIOIxJpd4F4yLMVjsniB4W1BpEV4Mi_nb4uJU=",
-        },
-        {
-            id: 3,
-            name: "The Belgian Waffle Co.",
-            tagline: "Best In Desserts",
-            rating: 4.6,
-            deliveryTime: "20-25 Mins",
-            description:
-                "Waffle, Desserts, Ice Cream Lorem, ipsum dolor sit amet consectetur adipisicing eli.",
-            img: "https://media.istockphoto.com/id/1442417585/photo/person-getting-a-piece-of-cheesy-pepperoni-pizza.jpg?s=612x612&w=0&k=20&c=k60TjxKIOIxJpd4F4yLMVjsniB4W1BpEV4Mi_nb4uJU=",
-        },
-        {
-            id: 3,
-            name: "The Belgian Waffle Co.",
-            tagline: "Best In Desserts",
-            rating: 4.6,
-            deliveryTime: "20-25 Mins",
-            description:
-                "Waffle, Desserts, Ice Cream Lorem, ipsum dolor sit amet consectetur adipisicing eli.",
-            img: "https://media.istockphoto.com/id/1442417585/photo/person-getting-a-piece-of-cheesy-pepperoni-pizza.jpg?s=612x612&w=0&k=20&c=k60TjxKIOIxJpd4F4yLMVjsniB4W1BpEV4Mi_nb4uJU=",
-        },
-        {
-            id: 3,
-            name: "The Belgian Waffle Co.",
-            tagline: "Best In Desserts",
-            rating: 4.6,
-            deliveryTime: "20-25 Mins",
-            description:
-                "Waffle, Desserts, Ice Cream Lorem, ipsum dolor sit amet consectetur adipisicing eli.",
-            img: "https://media.istockphoto.com/id/1442417585/photo/person-getting-a-piece-of-cheesy-pepperoni-pizza.jpg?s=612x612&w=0&k=20&c=k60TjxKIOIxJpd4F4yLMVjsniB4W1BpEV4Mi_nb4uJU=",
-        },
-        {
-            id: 3,
-            name: "The Belgian Waffle Co.",
-            tagline: "Best In Desserts",
-            rating: 4.6,
-            deliveryTime: "20-25 Mins",
-            description:
-                "Waffle, Desserts, Ice Cream Lorem, ipsum dolor sit amet consectetur adipisicing eli.",
-            img: "https://media.istockphoto.com/id/1442417585/photo/person-getting-a-piece-of-cheesy-pepperoni-pizza.jpg?s=612x612&w=0&k=20&c=k60TjxKIOIxJpd4F4yLMVjsniB4W1BpEV4Mi_nb4uJU=",
-        },
-        {
-            id: 3,
-            name: "The Belgian Waffle Co.",
-            tagline: "Best In Desserts",
-            rating: 4.6,
-            deliveryTime: "20-25 Mins",
-            description:
-                "Waffle, Desserts, Ice Cream Lorem, ipsum dolor sit amet consectetur adipisicing eli.",
-            img: "https://media.istockphoto.com/id/1442417585/photo/person-getting-a-piece-of-cheesy-pepperoni-pizza.jpg?s=612x612&w=0&k=20&c=k60TjxKIOIxJpd4F4yLMVjsniB4W1BpEV4Mi_nb4uJU=",
-        },
-        {
-            id: 3,
-            name: "The Belgian Waffle Co.",
-            tagline: "Best In Desserts",
-            rating: 4.6,
-            deliveryTime: "20-25 Mins",
-            description:
-                "Waffle, Desserts, Ice Cream Lorem, ipsum dolor sit amet consectetur adipisicing eli.",
-            img: "https://media.istockphoto.com/id/1442417585/photo/person-getting-a-piece-of-cheesy-pepperoni-pizza.jpg?s=612x612&w=0&k=20&c=k60TjxKIOIxJpd4F4yLMVjsniB4W1BpEV4Mi_nb4uJU=",
-        },
-    ];
 
     const toggleLike = (id) => {
         setLikedCards((prev) => ({
@@ -101,10 +19,10 @@ function ExploreRestaurant() {
     };
 
     useEffect(() => {
-        handleResize(); // Set initial state
-        window.addEventListener("resize", handleResize); // Listen to window resize
+        handleResize(); 
+        window.addEventListener("resize", handleResize); 
         return () => {
-            window.removeEventListener("resize", handleResize); // Cleanup
+            window.removeEventListener("resize", handleResize);
         };
     }, []);
 
@@ -115,7 +33,7 @@ function ExploreRestaurant() {
     return (
         <div className="mt-3">
             <h1>Top 2294 Restaurants to Explore</h1>
-            <div className="grid grid-cols-1  md:grid-cols-2  lg:grid-cols-3">
+            <div className="grid grid-cols-1  md:grid-cols-2  lg:grid-cols-3 gap-8">
                 {restaurants.map((restaurant) => (
                     <div key={restaurant.id} className="flex items-start gap-3">
                         <div>
@@ -126,24 +44,24 @@ function ExploreRestaurant() {
                                         alt={restaurant.name}
                                         className="w-full h-full rounded-2xl object-cover"
                                     />
-                                    <div className="absolute top-3 left-3 right-3 z-20 flex justify-end items-center">
+                                    <div className="absolute top-0 left-0 right-0 z-20 flex justify-end items-center">
                                         <button
                                             onClick={(e) => {
                                                 e.stopPropagation();
                                                 toggleLike(restaurant.id);
                                             }}
-                                            className="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-white/30 transition-all duration-200"
-                                            style={{ minWidth: "2.5rem", minHeight: "2.5rem" }}
+                                            className="absolute top-4 right-4 bg-white/80 p-2 rounded-full shadow-md hover:bg-red-50 transition-all duration-200"
                                         >
                                             {likedCards[restaurant.id] ? (
-                                                <AiFillHeart className="w-5 h-5 text-red-500" />
+                                                <AiFillHeart className="w-6 h-6 text-red-500" />
                                             ) : (
-                                                <AiOutlineHeart className="w-5 h-5 text-white" />
+                                                <AiOutlineHeart className="w-6 h-6 text-gray-500" />
                                             )}
                                         </button>
                                     </div>
-                                    <div className="text-xl text-zinc-50 font-extrabold absolute bottom-2 left-3 z-10">
-                                        {restaurant.name}
+                                    <div className="text-md text-zinc-50 font-semibold absolute bottom-2 left-3 z-10 flex justify-between">
+                                        <p className="text-inherit">{restaurant.name}</p>
+                                        <p>AD</p>
                                     </div>
                                     <div className="bg-custom-gradient w-full h-full rounded-2xl absolute bottom-0 z-0"></div>
                                 </div>
@@ -165,6 +83,10 @@ function ExploreRestaurant() {
                             </div>
                             <div className="text-wrap whitespace-nowrap text-slate-400 mt-2">
                                 {getDescription(restaurant.description)}
+                            </div>
+                            <div className="mt-2 text-sm font-semibold text-red flex justify-between p-4 rounded-full bg-gradient-to-r from-white to-red-100 font-mono">
+                                <p>Free Delivery</p>
+                                <p>One Lite</p>
                             </div>
                         </div>
                     </div>
