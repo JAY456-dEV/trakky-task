@@ -22,7 +22,6 @@ const RestaurantCard = ({
             </div>
 
             <div className="relative flex gap-4">
-                {/* Left side - Image */}
                 <div className="relative w-24 h-24 flex-shrink-0">
                     <img
                         src={image || "/api/placeholder/96/96"}
@@ -44,8 +43,7 @@ const RestaurantCard = ({
                         <AiOutlineHeart className="w-4 h-4 text-white" />
                     </button>
                 </div>
-
-                {/* Right side - Content */}
+                
                 <div className="flex-1">
                     <div className="flex justify-between items-start">
                         <div className="flex-1">
@@ -81,7 +79,6 @@ const RestaurantCard = ({
                         </button>
                     </div>
 
-                    {/* Free Delivery Tag */}
                     <div className="flex gap-2 mt-2">
                         <div className="bg-red-50 text-red-500 text-sm px-2 py-0.5 rounded-md">
                             FREE DELIVERY

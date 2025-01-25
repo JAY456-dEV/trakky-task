@@ -19,7 +19,7 @@ const PromoCard = () => {
 
             <div className="flex-shrink-0 mt-4 sm:mt-0 sm:ml-4 w-full sm:w-32 lg:w-40">
                 <img
-                    src="https://via.placeholder.com/150"
+                    src="./public/pizza.png"
                     alt="Food Promo"
                     className="w-full h-auto rounded-lg"
                 />

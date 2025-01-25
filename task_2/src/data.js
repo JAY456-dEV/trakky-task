@@ -1,7 +1,7 @@
 export const restaurants = [
     {
         id: 1,
-        name: "Artisan Pizza Co.",
+        name: "Italian Excellence Pizza Co.",
         tagline: "Handcrafted Italian Excellence",
         rating: 4.8,
         deliveryTime: "30-40 Mins",

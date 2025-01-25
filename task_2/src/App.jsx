@@ -14,7 +14,6 @@ function App() {
       <Header />
       <SearchBar />
       <PromoCard />
-      <p className='text-2xl font-bold capitalize pt-4'>Top restaurant chains in Ahmedaab</p>
       <Restaurant />
       <DishCato />
       <RestaurantList />
